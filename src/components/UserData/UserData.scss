@@ -1,0 +1,126 @@
+@import "./src/config";
+
+.user-page__wrapper {
+  display: flex;
+  min-height: 100%;
+  padding-left: 57px;
+  padding-right: 57px;
+  background-color: $color-main;
+  @media screen and (max-width: $screen-tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: $screen-tablet) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.user-page__main {
+  display: flex;
+  flex: 0 1 556px;
+  align-items: start;
+  flex-direction: column;
+  padding-top: 111px;
+  margin-bottom: 28px;
+  @media screen and (max-width: $screen-tablet) {
+    flex: 0 1 360px;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 90px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    flex: 0 1 450px;
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.user-page__data {
+  @media screen and (max-width: $screen-mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.user-page__avatar {
+  height: 280px;
+  border-radius: 50%;
+  margin-bottom: 28px;
+  @media screen and (max-width: $screen-tablet) {
+    height: 230px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    height: 230px;
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+}
+
+.user-page__name {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 33.8px;
+  margin-bottom: 12px;
+}
+
+.user-page__login {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  color: $color-header;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 25px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 1px 0 $color-header;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    margin-bottom: 8px;
+  }
+}
+
+.user-page__followers {
+  position: relative;
+  display: inline-block;
+  margin-right: 16px;
+  padding-left: 31px;
+  &::before {
+    content: url("/src/images/followers.svg");
+    position: absolute;
+    left: 0;
+  }
+  @media screen and (max-width: $screen-tablet) {
+    display: block;
+    margin: 5px;
+  }
+}
+
+.user-page__following {
+  position: relative;
+  display: inline-block;
+  padding-left: 31px;
+  &::before {
+    content: url("/src/images/following.svg");
+    position: absolute;
+    left: 0;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    display: block;
+    margin: 5px;
+  }
+}
+
+.user-page__repos {
+  width: 100%;
+}

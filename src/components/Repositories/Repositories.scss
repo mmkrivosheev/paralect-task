@@ -1,0 +1,73 @@
+@import "./src/config";
+
+.repos-no-list__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 72px;
+  background-color: $color-main;
+  @media (max-width: $screen-tablet) {
+    justify-content: start;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    height: auto;
+  }
+}
+
+.repos-no-list__icon {
+  height: 64px;
+  margin-bottom: 47px;
+}
+
+.repos-no-list__text {
+  font-size: 22px;
+  line-height: 30.8px;
+  color: $color-secondary;
+  text-align: center;
+}
+
+.repositories {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @media (max-width: $screen-tablet) {
+    align-items: center;
+    padding-top: 20px;
+  }
+}
+
+.repositories__total {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 41.6px;
+  margin-bottom: 29px;
+  @media screen and (max-width: $screen-tablet) {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    padding-top: 60px;
+  }
+}
+
+.repositories__repos-list {
+  position: relative;
+  flex: 1 1 auto;
+  @media screen and (max-width: $screen-tablet) {
+    align-self: stretch;
+  }
+}
+
+.repositories__pagination {
+  margin-bottom: 28px;
+  margin-right: 22px;
+  @media screen and (max-width: $screen-mobile) {
+    margin-right: 0;
+  }
+}

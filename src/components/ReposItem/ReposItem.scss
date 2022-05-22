@@ -1,0 +1,39 @@
+@import "./src/config";
+
+.repos-item__wrapper {
+  min-width: 400px;
+  margin-bottom: 24px;
+  padding: 24px 32px;
+  background-color: #FFF;
+  @media screen and (max-width: $screen-tablet) {
+    min-width: 0;
+    margin-bottom: 12px;
+    padding: 8px 10px;
+  }
+}
+
+.repos-item__name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.05px;
+  color: $color-header;
+  text-decoration: none;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-bottom: 16px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 1px 0 $color-header;
+
+  }
+  @media screen and (max-width: $screen-tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+.repos-item__description {
+  line-height: 19.36px;
+  word-wrap: break-word;
+}

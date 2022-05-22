@@ -1,0 +1,46 @@
+@import "./src/config";
+
+.page__wrapper {
+  display: flex;
+  justify-content: end;
+  @media screen and (max-width: $screen-tablet) {
+    margin-top: 25px;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.page__items {
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-secondary;
+  margin-right: 24px;
+  @media screen and (max-width: $screen-mobile) {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+.page {
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-secondary;
+  padding: 5px 6px;
+  margin: 9px;
+  cursor: pointer;
+  border-radius: 3px;
+  @media screen and (max-width: $screen-mobile) {
+    margin: 6px;
+  }
+}
+
+.page__dots {
+  color: $color-secondary;
+}
+
+.page__current {
+  color: #FFF;
+  background-color: $color-header;
+}

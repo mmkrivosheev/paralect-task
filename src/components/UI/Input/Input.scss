@@ -1,0 +1,34 @@
+@import "./src/config";
+
+.input__wrapper {
+  position: relative;
+  width: 500px;
+  height: 40px;
+  &::before {
+    content: url("/src/images/search.svg");
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    transform: translateY(-40%);
+  }
+  @media (max-width: $screen-mobile) {
+    width: 100%;
+  }
+}
+
+.input__search {
+  font-size: 14px;
+  line-height: 16.94px;
+  width: 100%;
+  height: 100%;
+  padding: 8px 14px 8px 44px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #FFF;
+  &:focus {
+    outline: 0;
+  }
+  &::placeholder {
+    color: $color-secondary;
+  }
+}

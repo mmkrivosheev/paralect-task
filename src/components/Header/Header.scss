@@ -1,0 +1,28 @@
+@import "./src/config";
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding-right: 56px;
+  padding-left: 41px;
+  background-color: $color-header;
+  @media screen and (max-width: $screen-mobile) {
+    padding-right: 12px;
+    padding-left: 12px;
+    height: 66px;
+  }
+}
+
+.header__logo {
+  height: 40px;
+  margin-right: 22px;
+  @media screen and (max-width: $screen-mobile) {
+    margin-right: 15px;
+  }
+}

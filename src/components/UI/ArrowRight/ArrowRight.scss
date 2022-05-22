@@ -1,0 +1,16 @@
+@import "./src/config";
+
+.arrow-right {
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+  margin-left: 19px;
+  cursor: pointer;
+  stroke-width: 2;
+  stroke: #0064EB;
+}
+
+.arrow-right--disabled {
+  cursor: default;
+  stroke: $color-secondary;
+}

@@ -1,0 +1,15 @@
+@import "./src/config";
+
+.arrow-left {
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+  margin-right: 19px;
+  cursor: pointer;
+  fill: #0064EB;
+}
+
+.arrow-left--disabled {
+  cursor: default;
+  fill: $color-secondary;
+}
