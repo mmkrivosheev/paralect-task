@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from "react";
-import Loading from "./pages/Loading/Loading";
-import HomePage from "./pages/HomePage/HomePage";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
-import NoUserPage from "./pages/NoUserPage/NoUserPage";
-import UserPage from "./pages/UserPage/UserPage";
+import Header from "./components/Header/Header";
+import Loader from "./components/UI/Loader/Loader";
+import AppRouter from "./AppRouter";
+import "./App.scss";
 
 const App = () => {
     const [userName, setUserName] = useState("");
@@ -38,20 +37,23 @@ const App = () => {
         }
     }, [userName]);
 
-    if (isLoading) return <Loading />
-
-    if (!userName) return <HomePage startSearch={startSearch} />
-
-    if (error) return <ErrorPage startSearch={startSearch} error={error} />
-
-    if (userName && !userData) return <NoUserPage startSearch={startSearch} />
-
     return (
-        <UserPage
-            startSearch={startSearch}
-            userData={userData}
-            reposFirstPage={reposFirstPage}
-        />
+        <>
+            <Header startSearch={startSearch} />
+            {
+                isLoading
+                    ? <div className="app__loader">
+                        <Loader />
+                    </div>
+                    : <AppRouter
+                        userName={userName}
+                        userData={userData}
+                        reposFirstPage={reposFirstPage}
+                        startSearch={startSearch}
+                        error={error}
+                    />
+            }
+        </>
     );
 }
 
