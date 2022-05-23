@@ -46,7 +46,7 @@ const App = () => {
 
     if (userName && !userData) return <NoUserPage startSearch={startSearch} />
 
-    if (userData) return (
+    return (
         <UserPage
             startSearch={startSearch}
             userData={userData}
